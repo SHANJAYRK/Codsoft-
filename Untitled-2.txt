@@ -1,0 +1,52 @@
+# Calculator Program
+
+# Function to add two numbers
+def add(x, y):
+    return x + y
+
+    # Function to subtract two numbers
+    def subtract(x, y):
+        return x - y
+
+        # Function to multiply two numbers
+        def multiply(x, y):
+            return x * y
+
+            # Function to divide two numbers
+            def divide(x, y):
+                if y != 0:
+                        return x / y
+                            else:
+                                    return "Cannot divide by zero"
+
+                                    # Main program
+                                    if __name__ == "__main__":
+                                        while True:
+                                                print("\nSimple Calculator:")
+                                                        print("1. Add")
+                                                                print("2. Subtract")
+                                                                        print("3. Multiply")
+                                                                                print("4. Divide")
+                                                                                        print("5. Quit")
+
+                                                                                                choice = input("Enter your choice (1-5): ")
+
+                                                                                                        if choice in ("1", "2", "3", "4"):
+                                                                                                                    num1 = float(input("Enter first number: "))
+                                                                                                                                num2 = float(input("Enter second number: "))
+
+                                                                                                                                            if choice == "1":
+                                                                                                                                                            print(f"{num1} + {num2} = {add(num1, num2)}")
+                                                                                                                                                                        elif choice == "2":
+                                                                                                                                                                                        print(f"{num1} - {num2} = {subtract(num1, num2)}")
+                                                                                                                                                                                                    elif choice == "3":
+                                                                                                                                                                                                                    print(f"{num1} * {num2} = {multiply(num1, num2)}")
+                                                                                                                                                                                                                                elif choice == "4":
+                                                                                                                                                                                                                                                result = divide(num1, num2)
+                                                                                                                                                                                                                                                                print(f"{num1} / {num2} = {result}")
+                                                                                                                                                                                                                                                                        elif choice == "5":
+                                                                                                                                                                                                                                                                                    print("Quitting the calculator. Goodbye!")
+                                                                                                                                                                                                                                                                                                break
+                                                                                                                                                                                                                                                                                                        else:
+                                                                                                                                                                                                                                                                                                                    print("Invalid choice. Please enter a number between 1 and 5.")
+                                                                                                                                                                                                                                                                                                                    

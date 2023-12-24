@@ -1,0 +1,48 @@
+# To-Do List Program
+
+# Function to display the to-do list
+def display_list(todo_list):
+    print("To-Do List:")
+        for i, task in enumerate(todo_list, start=1):
+                print(f"{i}. {task}")
+
+                # Function to add a task to the to-do list
+                def add_task(todo_list, task):
+                    todo_list.append(task)
+                        print(f"Task '{task}' added to the list.")
+
+                        # Function to remove a task from the to-do list
+                        def remove_task(todo_list, task_index):
+                            if 1 <= task_index <= len(todo_list):
+                                    removed_task = todo_list.pop(task_index - 1)
+                                            print(f"Task '{removed_task}' removed from the list.")
+                                                else:
+                                                        print("Invalid task index.")
+
+                                                        # Main program
+                                                        if __name__ == "__main__":
+                                                            # Initial empty to-do list
+                                                                my_todo_list = []
+
+                                                                    while True:
+                                                                            print("\n1. Display To-Do List")
+                                                                                    print("2. Add Task")
+                                                                                            print("3. Remove Task")
+                                                                                                    print("4. Quit")
+
+                                                                                                            choice = input("Enter your choice (1-4): ")
+
+                                                                                                                    if choice == "1":
+                                                                                                                                display_list(my_todo_list)
+                                                                                                                                        elif choice == "2":
+                                                                                                                                                    new_task = input("Enter the task to add: ")
+                                                                                                                                                                add_task(my_todo_list, new_task)
+                                                                                                                                                                        elif choice == "3":
+                                                                                                                                                                                    task_index = int(input("Enter the index of the task to remove: "))
+                                                                                                                                                                                                remove_task(my_todo_list, task_index)
+                                                                                                                                                                                                        elif choice == "4":
+                                                                                                                                                                                                                    print("Quitting the program. Goodbye!")
+                                                                                                                                                                                                                                break
+                                                                                                                                                                                                                                        else:
+                                                                                                                                                                                                                                                    print("Invalid choice. Please enter a number between 1 and 4.")
+                                                                                                                                                                                                                                                    
